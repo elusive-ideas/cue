@@ -1,6 +1,7 @@
 Getting Started
 ===============
 
-Here is some information on how to get started with `cue`.
+.. toctree::
+   :maxdepth: 2
 
-Stay tuned for more information about what this module is all about.
+   hitem
