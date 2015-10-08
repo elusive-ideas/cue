@@ -1,40 +1,22 @@
-hitem
-=====
+Hierarchical Structures
+=======================
 
-`hitem` is a custom kind of object that allows the user to create hierarchical
-structures easily.
+Quite often we deal with complex data sets which elements keep some kind of
+hierarchical structure. They are usually represented using a tree:
 
-Creating a hitem
------------------
+.. image:: img/tree.png
 
-asd
+It is possible to create complex tree-like structures like the one above using
+the :func:`HItem <cue.obj.hitem.HItem>` object as it provides a
+series of methods that allows you to specify hierarchical relationships between
+objects. It also provides methods to get information about its parent/children
+so navigating the tree is piece of cake!
 
-Defining hierarchy
-------------------
+.. toctree::
+   :hidden:
+   :maxdepth: 2
 
-asd
-
-Hierarchy representation
-------------------------
-
-It is possible to get a representation of the hierarchy of any `hitem` object
-and his children by simply printing the object:
-
->>> from cue.obj.hitem import HItem
->>>
->>> root = HItem(name='Project')
->>> section01 = HItem(name='Section01', parent=root)
->>> HItem(name='sec01_element_01', parent=section01)
->>> HItem(name='sec01_element_02', parent=section01)
->>> section02 = HItem(name='Section02', parent=root)
->>> HItem(name='sec02_element_01', parent=section02)
->>> HItem(name='sec02_element_02', parent=section02)
->>>
->>> print root
-|- Project
-   |- Section01
-      |- sec01_element_01
-      |- sec01_element_02
-   |- Section02
-      |- sec02_element_01
-      |- sec02_element_02
+   hitem_create
+   hitem_define
+   hitem_repr
+   hitem_example01
