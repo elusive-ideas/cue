@@ -30,6 +30,13 @@ class HItem(object):
 
         self._children.append(child)
 
+    def deleteChild(self, child):
+        '''
+        Delete a child object from the current one
+        '''
+
+        self._children.remove(child)
+
     def child(self, row):
         '''
         Returns the child node of the current one that has a specific index
@@ -50,6 +57,17 @@ class HItem(object):
         '''
 
         return self._parent
+
+    def setParent(self, parent):
+        '''
+        Sets the parent for the current object
+        '''
+
+        if self._parent:
+            self._parent.deleteChild(self)
+
+        parent.addChild(self)
+        self._parent = parent
 
     def row(self):
         '''
