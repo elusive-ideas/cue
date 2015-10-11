@@ -1,4 +1,6 @@
 Models
 ======
 
-To be completed..
+.. module:: cue.model.treemodel
+.. autoclass:: TreeModel
+    :members:

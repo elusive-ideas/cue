@@ -11,3 +11,6 @@ This guide contains the following Sub-Sections:
    :maxdepth: 2
 
    hitem
+   treemodel
+   treeview
+   proxymodel

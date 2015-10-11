@@ -4,15 +4,26 @@ from PySide import QtGui
 
 class TreeView(QtGui.QTreeView):
     def __init__(self):
+        '''
+        Initialisator..
+        '''
+
         super(TreeView, self).__init__()
         self.set_behaviour()
         self.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
 
     def set_behaviour(self):
+        '''
+        Set behaviours for the TreeView
+        '''
+
         self.doubleClicked.connect(self.item_double_clicked)
         self.customContextMenuRequested.connect(self.context_menu)
 
     def item_double_clicked(self):
+        '''
+        Method that gets executed when using double click on TreeView
+        '''
 
         item = self.item_under_cursor()
         if item:

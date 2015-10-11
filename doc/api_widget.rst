@@ -1,4 +1,6 @@
 Widgets
 =======
 
-To be completed..
+.. module:: cue.widget.treeview
+.. autoclass:: TreeView
+    :members:
