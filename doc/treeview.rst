@@ -53,7 +53,7 @@ connected the request to. Here is an example:
            self.folderMenu.exec_(QtGui.QCursor.pos())
 
 .. warning:: Notice that the example above uses the treeview's method
-'item_under_cursor' in order to get the item currently under the cursor.
+   'item_under_cursor' in order to get the item currently under the cursor.
 
 Adding double click functionality
 ---------------------------------
@@ -63,7 +63,7 @@ in a treeview. All what needs to be done is connect the event to a function:
 
 .. code-block:: python
 
-self.doubleClicked.connect(self.item_double_clicked)
+   self.doubleClicked.connect(self.item_double_clicked)
 
 And then define the function itself:
 
@@ -76,7 +76,7 @@ And then define the function itself:
           print item.name
 
 .. warning:: Notice that the example above uses the treeview's method
-'item_under_cursor' in order to get the item currently under the cursor.
+   'item_under_cursor' in order to get the item currently under the cursor.
 
 Catching key presses
 --------------------
