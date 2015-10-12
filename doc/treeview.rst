@@ -63,7 +63,7 @@ in a treeview. All what needs to be done is connect the event to a function:
 
 .. code-block:: python
 
-self.doubleClicked.connect(self.item_double_clicked)
+   self.doubleClicked.connect(self.item_double_clicked)
 
 And then define the function itself:
 
