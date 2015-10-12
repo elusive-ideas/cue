@@ -81,4 +81,20 @@ And then define the function itself:
 Catching key presses
 --------------------
 
-information about how to catch key presses when using the treeview.
+If we want to catch any key presses that happen when the focus is in the
+treeview, we will need to re-implement the keyPressEvent method of the treeview
+class. Here is an example:
+
+.. code-block:: python
+
+   def keyPressEvent(self, event):
+       return_key = QtCore.Qt.Key_Return
+       enter_key = QtCore.Qt.Key_Enter
+
+       if (event.key() == return_key or event.key() == enter_key):
+           # Do something
+           pass
+           
+           return True
+
+       super(TreeView, self).keyPressEvent(event)
