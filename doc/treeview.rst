@@ -9,10 +9,22 @@ a few things that we can define in the treeview:
 - Action to be taken when double click
 - Catching key presses
 
-Treeview Header
----------------
+Header visibility
+-----------------
 
-information about the header
+By default, the header of the treeview is visible. It is possible to disable
+its visibility by using the following code in its initialisator:
+
+.. code-block:: python
+
+   self.header().hide()
+
+Alternatively, you can also hide the header at runtime by calling the method
+on the treeview object:
+
+.. code-block:: python
+
+   view.header().hide()
 
 Adding a Context Menu
 ---------------------
