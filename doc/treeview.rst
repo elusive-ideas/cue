@@ -29,7 +29,28 @@ on the treeview object:
 Adding a Context Menu
 ---------------------
 
-information about adding a context menu
+If you want to add a context menu to the treeview, the first thing you'll need
+to do is add the following in the initialisator or your treeview:
+
+.. code-block:: python
+
+   self.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
+   self.customContextMenuRequested.connect(self.context_menu)
+
+Once done, you'll have to implement the name of the method that you are
+connected the request to. Here is an example:
+
+.. code-block:: python
+
+   def context_menu(self, pos):
+       item = self.item_under_cursor()
+
+       if item:
+           self.folderMenu = QtGui.QMenu(self)
+           selInExpl_menu = QtGui.QMenu('Item: {0}'.format(item.name), self)
+           selInExpl_menu.setEnabled(False)
+           self.folderMenu.addMenu(selInExpl_menu)
+           self.folderMenu.exec_(QtGui.QCursor.pos())
 
 Adding double click functionality
 ---------------------------------
