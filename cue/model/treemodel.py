@@ -1,5 +1,4 @@
 from PySide import QtCore
-from PySide import QtGui
 
 
 class TreeModel(QtCore.QAbstractItemModel):
