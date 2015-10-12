@@ -36,6 +36,12 @@ the following syntax:
 
        return 1
 
+Specifying data for the header
+------------------------------
+
+Assuming that the header is visible, it is possible to specify the data shown
+in it by overloading the `headerData` method.
+
 Specifying the data to be displayed
 -----------------------------------
 
