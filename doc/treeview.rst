@@ -52,11 +52,31 @@ connected the request to. Here is an example:
            self.folderMenu.addMenu(selInExpl_menu)
            self.folderMenu.exec_(QtGui.QCursor.pos())
 
+.. warning:: Notice that the example above uses the treeview's method
+'item_under_cursor' in order to get the item currently under the cursor.
+
 Adding double click functionality
 ---------------------------------
 
-information about how to trigger an action when the user double clicks on the
-view.
+There is nothing special about the implementation of a check for double click
+in a treeview. All what needs to be done is connect the event to a function:
+
+.. code-block:: python
+
+self.doubleClicked.connect(self.item_double_clicked)
+
+And then define the function itself:
+
+.. code-block:: python
+
+   def item_double_clicked(self):
+
+       item = self.item_under_cursor()
+       if item:
+          print item.name
+
+.. warning:: Notice that the example above uses the treeview's method
+'item_under_cursor' in order to get the item currently under the cursor.
 
 Catching key presses
 --------------------
