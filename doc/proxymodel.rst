@@ -20,16 +20,10 @@ In order to create a proxy model, we need to use the following syntax:
 .. note:: Even though the example above uses PySide, you might want to replace
    it by PyQt4, PyQt5 or whichever library you are using.
 
-Sorting Items
--------------
+Advanced Sorting
+----------------
 
-It is possible to enable sorting in a view by adding the following to its
-initialization method. When doing this, you will be able to toggle the order
-of the items by clicking on the header of a specific column:
-
-.. code-block:: python
-
-   self.setSortingEnabled(True)
+Placeholder text
 
 Filtering Items
 ---------------
