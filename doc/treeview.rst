@@ -26,6 +26,19 @@ on the treeview object:
 
    view.header().hide()
 
+Sorting Items
+-------------
+
+Providing that the header is visible, it is possible to enable sorting in a
+view by adding the following to its initialization method:
+
+.. code-block:: python
+
+  self.setSortingEnabled(True)
+
+When doing this, you will be able to toggle the order of the items by clicking
+on the header of a specific column.
+
 Adding a Context Menu
 ---------------------
 
@@ -94,7 +107,7 @@ class. Here is an example:
        if (event.key() == return_key or event.key() == enter_key):
            # Do something
            pass
-           
+
            return True
 
        super(TreeView, self).keyPressEvent(event)
