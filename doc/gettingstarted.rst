@@ -14,3 +14,4 @@ This guide contains the following Sub-Sections:
    treemodel
    treeview
    proxymodel
+   trayicon
